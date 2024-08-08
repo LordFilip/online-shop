@@ -1,7 +1,6 @@
-<?php
+<?php require_once "inc/header.php" ?>
+   
+    
+        <a href="register.php">Register</a>
 
-   require_once "app/config/config.php"
-
-   ?>
-
-   <a href="register.php">Register</a>
+<?php require_once 'inc/footer.php'; ?>
