@@ -20,9 +20,10 @@
         $order = new Order();
         $order = $order -> create($delivery_adress);
 
-        if($order){
-
-        }
+        $_SESSION['message']['type'] = 'success';
+        $_SESSION['message']['text'] = "Successfully ordered!";
+        header("Location: orders.php");
+        exit();
 
     }
 ?>

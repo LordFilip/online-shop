@@ -27,4 +27,11 @@
             $result = $stmt -> get_result();
             return $result -> fetch_all(MYSQLI_ASSOC);
         }
+
+        public function destroy_cart(){
+
+            $stmt = $this->conn->prepare("DELETE FROM cart WHERE user_id = ?");
+            $stmt -> bind_param("i",$_SESSION['user_id']);
+            $stmt -> execute();
+        }
     }
