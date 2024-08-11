@@ -3,6 +3,8 @@
     require_once "inc/header.php";
     require_once "app/classes/User.php";
 
+    $user = new User();
+    
     if($user -> is_logged()){
         header("Location: index.php");
         exit();
@@ -20,6 +22,7 @@
         if($created){
             $_SESSION['message']['type'] = 'success';
             $_SESSION['message']['text'] = "Successfull registration!";
+            $user->login($username,$password);
             header("Location: index.php");
             exit();
         }else{

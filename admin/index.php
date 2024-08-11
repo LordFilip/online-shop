@@ -3,6 +3,7 @@
     require '../app/config/config.php';
     require '../app/classes/User.php';
     require '../app/classes/Product.php';
+   
 
     $user = new User();
 
